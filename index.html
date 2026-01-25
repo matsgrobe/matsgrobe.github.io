@@ -1,78 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mats Leander Grobe | AI & Visual Computing</title>
-    <style>
-        /* Simple, Clean CSS */
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
-        header { text-align: center; padding: 50px 0; }
-        h1 { margin-bottom: 10px; font-size: 2.5rem; color: #222; }
-        h2 { font-weight: 300; color: #666; font-size: 1.2rem; margin-top: 0; }
-        .social-links { margin-top: 20px; }
-        .social-links a { margin: 0 10px; text-decoration: none; color: #0066cc; font-weight: bold; }
-        .social-links a:hover { text-decoration: underline; }
-        
-        section { margin-bottom: 40px; }
-        .project { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
-        .project h3 { margin-bottom: 5px; }
-        .tech-stack { font-size: 0.85rem; color: #555; font-style: italic; }
-        
-        .btn { display: inline-block; background: #333; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 4px; margin-top: 10px; }
-        .btn:hover { background: #555; }
-    </style>
+    <title>Mats Leander Grobe | Research Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400&display=swap"
+        rel="stylesheet">
+    <meta name="description"
+        content="Portfolio of Mats Leander Grobe, Research Engineer in Neural Rendering & Visual Computing.">
 </head>
+
 <body>
 
-    <header>
-        <h1>Mats Leander Grobe</h1>
-        <h2>M.Sc. Student "Robotics, Cognition, Intelligence" at TUM<br>Researcher in Neural Rendering & Visual Computing</h2>
-        
-        <div class="social-links">
-            <a href="https://github.com/matsgrobe">GitHub</a>
-            <a href="mailto:mats.grobe@tum.de">Email</a>
-            <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-HANDLE">LinkedIn</a> </div>
-    </header>
+    <div class="container">
 
-    <section>
-        <h3>About Me</h3>
-        <p>
-            I sit at the intersection of Mechanical Engineering and Artificial Intelligence. 
-            Currently conducting research at the <strong>TUM Visual Computing & AI Lab (Prof. Nießner)</strong>, 
-            I specialize in bridging the gap between abstract Deep Learning research and real-world hardware constraints.
-        </p>
-        <p>
-            My focus is on Neural Rendering, Computer Vision, and high-performance computing (C++/CUDA).
-        </p>
-    </section>
+        <!-- HEADER / HERO -->
+        <header>
+            <span class="hero-super">Hello, I'm</span>
+            <h1 class="hero-title">Mats Grobe</h1>
+            <h2 class="hero-subtitle">M.Sc. Student in Robotics, Cognition, Intelligence.<br>Researcher in Neural
+                Rendering.</h2>
 
-    <section>
-        <h3>Selected Projects</h3>
-        
-        <div class="project">
-            <h3>FoamSurf: Differentiable Rendering Framework</h3>
-            <p class="tech-stack">Python, PyTorch, CUDA, Custom Kernels</p>
-            <p>
-                Developed an extension to the RadFoam paper for high-surface fidelity reconstruction. 
-                Integrated vision foundation models as geometric priors and wrote custom CUDA kernels to optimize the rendering pipeline.
-            </p>
-            <a href="https://github.com/matsgrobe" class="btn">View on GitHub</a>
-        </div>
+            <div class="contact-info">
+                <span>Munich, Germany</span>
+                <span>&bull;</span>
+                <a href="mailto:matsgrobe@mailbox.org">matsgrobe@mailbox.org</a>
+                <span>&bull;</span>
+                <a href="https://github.com/matsgrobe" target="_blank">GitHub</a>
+                <span>&bull;</span>
+                <span>+49 160 182 3047</span>
+            </div>
+        </header>
 
-        <div class="project">
-            <h3>ECU Interface Design (MAN Truck & Bus)</h3>
-            <p class="tech-stack">Embedded Systems, C++, Hardware Interface</p>
-            <p>
-                Designed and programmed a physical Engine Control Unit (ECU) interface during an industrial internship. 
-                Handled real-time vehicle communication protocols and hardware constraints.
-            </p>
-        </div>
-    </section>
+        <!-- EDUCATION -->
+        <section id="education">
+            <h2 class="section-title">Education</h2>
 
-    <footer style="text-align: center; font-size: 0.8rem; color: #888; margin-top: 50px;">
-        &copy; 2024 Mats Leander Grobe
-    </footer>
+            <div class="timeline-item">
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">Technical University of Munich (TUM)</div>
+                            <div class="card-subtitle">M.Sc. in Robotics, Cognition, Intelligence</div>
+                        </div>
+                        <div class="card-date">Oct 2024 -- Present</div>
+                    </div>
+                    <div class="card-details">
+                        <p>Munich, Germany <span class="grade-badge">Grade: 1.5 (Top 2%)</span></p>
+                    </div>
+                </div>
+            </div>
 
+            <div class="timeline-item">
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">Sungkyunkwan University (SKKU)</div>
+                            <div class="card-subtitle">B.Sc. in Mechanical Engineering</div>
+                        </div>
+                        <div class="card-date">Sept 2020 -- Aug 2024</div>
+                    </div>
+                    <div class="card-details">
+                        <p>Seoul, South Korea <span class="grade-badge">Grade: 3.99/4.5</span></p>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section id="experience">
+            <h2 class="section-title">Research & Professional Experience</h2>
+
+            <div class="timeline-item">
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">Research Project: Inverse Rendering</div>
+                            <div class="card-subtitle">TUM Visual Computing & AI Lab (Prof. Matthias Nießner)</div>
+                        </div>
+                        <div class="card-date">Oct 2025 -- Present</div>
+                    </div>
+                    <div class="card-details">
+                        <ul>
+                            <li>Implementing <strong>Inverse Rendering</strong> pipeline in PyTorch to reconstruct
+                                high-fidelity material properties and geometry from OLAT (One-Light-at-a-Time)
+                                lightstage data.</li>
+                            <li>Custom <strong>differentiable rasterizer</strong> for 2D Gaussian Splatting using
+                                <strong>CUDA</strong>.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">Research Project: Neural Rendering (Surface Reconstruction)</div>
+                            <div class="card-subtitle">TUM Visual Computing & AI Lab (Prof. Matthias Nießner)</div>
+                        </div>
+                        <div class="card-date">Apr 2025 -- Jul 2025</div>
+                    </div>
+                    <div class="card-details">
+                        <ul>
+                            <li>Developed "FoamSurf," extending <strong>differentiable volumetric rendering</strong>
+                                framework RadFoam by integrating monocular depth/normal priors into <strong>CUDA
+                                    raytracing</strong> pipeline.</li>
+                            <li>Outperformed 2D Gaussian Splatting in mesh reconstruction quality (MAE) for surface
+                                extraction tasks.</li>
+                            <li><strong>Stack</strong>: Python, PyTorch, CUDA, C++.</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/matsgrobe/FoamSurf" class="code-btn" target="_blank">View
+                                Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">Tutor: Introduction to Deep Learning (I2DL)</div>
+                            <div class="card-subtitle">Technical University of Munich</div>
+                        </div>
+                        <div class="card-date">Apr 2025 -- Present</div>
+                    </div>
+                    <div class="card-details">
+                        <ul>
+                            <li>Teaching Deep Learning concepts (Backpropagation, CNNs, Transformers, GANs) to graduate
+                                students.</li>
+                            <li>Assisting with PyTorch implementation exercises and grading exams.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">Researcher: Advanced Additive Manufacturing Lab</div>
+                            <div class="card-subtitle">Sungkyunkwan University (Prof. Brian J. Lee)</div>
+                        </div>
+                        <div class="card-date">Nov 2023 -- Mar 2024</div>
+                    </div>
+                    <div class="card-details">
+                        <ul>
+                            <li>Full instrumentation of high-precision CLIP (Continuous Liquid Interface Production) 3D
+                                Printer.</li>
+                            <li>Developed the control software in <strong>C++</strong> from the ground up, including a
+                                custom GUI via <strong>Qt</strong>.</li>
+                            <li>Achieved 20-micron print resolution through precise stepper motor control.</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/mats-grobe/Lee-Lab-SKKU-3D-Dynamic-Printing-Software-for-Clip-Dlp"
+                                class="code-btn" target="_blank">View Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">Intern: Embedded Systems</div>
+                            <div class="card-subtitle">MAN Truck & Bus Korea</div>
+                        </div>
+                        <div class="card-date">June 2023 -- July 2023</div>
+                    </div>
+                    <div class="card-details">
+                        <ul>
+                            <li>Designed a Diesel Engine Control Unit (ECU) interface using Arduino microcontrollers.
+                            </li>
+                            <li>Enabled two-way communication via <strong>CAN Bus</strong> to control truck features for
+                                diagnostics.</li>
+                            <li>Authored technical manuals for local engineering staff.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">Researcher: Microfluidic Convergence Lab</div>
+                            <div class="card-subtitle">Sungkyunkwan University (Prof. Jinkee Lee)</div>
+                        </div>
+                        <div class="card-date">Dec 2022 -- Feb 2023</div>
+                    </div>
+                    <div class="card-details">
+                        <ul>
+                            <li>Conducted <strong>Computational Fluid Dynamics (CFD)</strong> simulations of gas-dynamic
+                                virtual nozzles.</li>
+                            <li>Analyzed droplet formation behavior using simulation data to optimize nozzle geometry.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">Intern: Robotics Support</div>
+                            <div class="card-subtitle">Plasmatreat Korea</div>
+                        </div>
+                        <div class="card-date">Dec 2021 -- Feb 2022</div>
+                    </div>
+                    <div class="card-details">
+                        <ul>
+                            <li>Programmed a 3-axis robot for automated atmospheric plasma surface treatment in a lab
+                                environment.</li>
+                            <li>Supported the sales engineering team during on-site customer visits and ad-hoc service
+                                calls.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills">
+            <h2 class="section-title">Skills & Languages</h2>
+
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming & Compute</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">C++ (STL, C++17)</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">CUDA</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">MATLAB</span>
+                        <span class="skill-tag">Qt</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Simulation & Engineering</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">CFD (Ansys Fluent)</span>
+                        <span class="skill-tag">ROS/ROS2</span>
+                        <span class="skill-tag">Arduino</span>
+                        <span class="skill-tag">CAN Bus</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Linux</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lang-grid">
+                <div class="lang-item">
+                    <span class="lang-name">German</span>
+                    <span class="lang-level">Native</span>
+                </div>
+                <div class="lang-item">
+                    <span class="lang-name">English</span>
+                    <span class="lang-level">Expert (C1/C2)</span>
+                </div>
+                <div class="lang-item">
+                    <span class="lang-name">Korean</span>
+                    <span class="lang-level">B2 (TOPIK 4)</span>
+                </div>
+                <div class="lang-item">
+                    <span class="lang-name">Russian</span>
+                    <span class="lang-level">Intermediate</span>
+                </div>
+                <div class="lang-item">
+                    <span class="lang-name">Italian</span>
+                    <span class="lang-level">Intermediate</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- VOLUNTEERING -->
+        <section id="volunteering">
+            <h2 class="section-title">Volunteering</h2>
+
+            <div class="timeline-item">
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">European Solidarity Corps</div>
+                            <div class="card-subtitle">Volunteer in Kindergarten (Makkabi Lauder)</div>
+                        </div>
+                        <div class="card-date">Sept 2019 -- Mar 2020</div>
+                    </div>
+                    <div class="card-details">
+                        <p>Samara, Russia</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer style="text-align: center; color: var(--text-secondary); margin-bottom: 40px; font-size: 0.8rem;">
+            &copy; 2026 Mats Leander Grobe. All rights reserved.
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>

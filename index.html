@@ -17,23 +17,120 @@
 
     <div class="container">
 
-        <!-- HEADER / HERO -->
-        <header>
-            <span class="hero-super">Hello, I'm</span>
-            <h1 class="hero-title">Mats Grobe</h1>
-            <h2 class="hero-subtitle">M.Sc. Student in Robotics, Cognition, Intelligence.<br>Researcher in Neural
-                Rendering.</h2>
+        <!-- NAVIGATION -->
+        <nav class="navbar">
+            <div class="nav-logo">Mats Grobe</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
 
-            <div class="contact-info">
-                <span>Munich, Germany</span>
-                <span>&bull;</span>
-                <a href="mailto:matsgrobe@mailbox.org">matsgrobe@mailbox.org</a>
-                <span>&bull;</span>
-                <a href="https://github.com/matsgrobe" target="_blank">GitHub</a>
-                <span>&bull;</span>
-                <span>+49 160 182 3047</span>
+        <!-- HEADER / HERO -->
+        <header id="hero">
+            <div class="hero-content">
+                <span class="hero-super">Hello, I'm</span>
+                <h1 class="hero-title">Mats Grobe</h1>
+                <h2 class="hero-subtitle">Research Engineer in <span class="highlight">Neural Rendering</span> & <span
+                        class="highlight">Visual Computing</span>.</h2>
+                <p class="hero-text">
+                    Specializing in Inverse Rendering, Differentiable Rendering, and High-Performance Computing
+                    (CUDA/C++).
+                    Currently pursuing M.Sc. in Robotics, Cognition, Intelligence at TUM.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
             </div>
         </header>
+
+        <!-- PROJECTS GALLERY -->
+        <section id="projects">
+            <h2 class="section-title">Selected Projects</h2>
+            <div class="projects-grid">
+
+                <!-- Project 1: Inverse Rendering -->
+                <article class="project-card">
+                    <div class="project-visual">
+                        <!-- Placeholder for visualization -->
+                        <div class="visual-placeholder" style="background: linear-gradient(45deg, #0f172a, #334155);">
+                            <span>Rendering Visualization</span>
+                        </div>
+                        <!-- <video src="path/to/video.mp4" autoplay loop muted playsinline></video> -->
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Inverse Rendering Pipeline</h3>
+                        <div class="tech-stack">
+                            <span>PyTorch</span>
+                            <span>CUDA</span>
+                            <span>Differentiable Rendering</span>
+                        </div>
+                        <p class="project-desc">
+                            Reconstructing high-fidelity material properties and geometry from OLAT
+                            (One-Light-at-a-Time) lightstage data using a custom differentiable rasterizer.
+                        </p>
+                        <div class="project-links">
+                            <span class="status-badge">In Progress</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: FoamSurf -->
+                <article class="project-card">
+                    <div class="project-visual">
+                        <div class="visual-placeholder" style="background: linear-gradient(45deg, #1e293b, #475569);">
+                            <span>Surface Reconstruction</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">FoamSurf</h3>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>CUDA</span>
+                            <span>C++</span>
+                        </div>
+                        <p class="project-desc">
+                            Extended differentiable volumetric rendering framework by integrating monocular depth/normal
+                            priors into a CUDA raytracing pipeline, outperforming 2D Gaussian Splatting in mesh quality.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/matsgrobe/FoamSurf" target="_blank" class="link-btn">View
+                                Code</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: 3D Printer Control -->
+                <article class="project-card">
+                    <div class="project-visual">
+                        <div class="visual-placeholder" style="background: linear-gradient(45deg, #334155, #64748b);">
+                            <span>3D Printing Control</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">CLIP 3D Printer Control</h3>
+                        <div class="tech-stack">
+                            <span>C++</span>
+                            <span>Qt</span>
+                            <span>Hardware Control</span>
+                        </div>
+                        <p class="project-desc">
+                            Developed control software and GUI for a high-precision Continuous Liquid Interface
+                            Production (CLIP) 3D printer, achieving 20-micron resolution.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/mats-grobe/Lee-Lab-SKKU-3D-Dynamic-Printing-Software-for-Clip-Dlp"
+                                target="_blank" class="link-btn">View Code</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
 
         <!-- EDUCATION -->
         <section id="education">
@@ -75,54 +172,6 @@
         <!-- EXPERIENCE -->
         <section id="experience">
             <h2 class="section-title">Research & Professional Experience</h2>
-
-            <div class="timeline-item">
-                <div class="card">
-                    <div class="card-header">
-                        <div>
-                            <div class="card-title">Research Project: Inverse Rendering</div>
-                            <div class="card-subtitle">TUM Visual Computing & AI Lab (Prof. Matthias Nießner)</div>
-                        </div>
-                        <div class="card-date">Oct 2025 -- Present</div>
-                    </div>
-                    <div class="card-details">
-                        <ul>
-                            <li>Implementing <strong>Inverse Rendering</strong> pipeline in PyTorch to reconstruct
-                                high-fidelity material properties and geometry from OLAT (One-Light-at-a-Time)
-                                lightstage data.</li>
-                            <li>Custom <strong>differentiable rasterizer</strong> for 2D Gaussian Splatting using
-                                <strong>CUDA</strong>.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="card">
-                    <div class="card-header">
-                        <div>
-                            <div class="card-title">Research Project: Neural Rendering (Surface Reconstruction)</div>
-                            <div class="card-subtitle">TUM Visual Computing & AI Lab (Prof. Matthias Nießner)</div>
-                        </div>
-                        <div class="card-date">Apr 2025 -- Jul 2025</div>
-                    </div>
-                    <div class="card-details">
-                        <ul>
-                            <li>Developed "FoamSurf," extending <strong>differentiable volumetric rendering</strong>
-                                framework RadFoam by integrating monocular depth/normal priors into <strong>CUDA
-                                    raytracing</strong> pipeline.</li>
-                            <li>Outperformed 2D Gaussian Splatting in mesh reconstruction quality (MAE) for surface
-                                extraction tasks.</li>
-                            <li><strong>Stack</strong>: Python, PyTorch, CUDA, C++.</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://github.com/matsgrobe/FoamSurf" class="code-btn" target="_blank">View
-                                Code</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <div class="timeline-item">
                 <div class="card">
@@ -306,8 +355,42 @@
             </div>
         </section>
 
-        <footer style="text-align: center; color: var(--text-secondary); margin-bottom: 40px; font-size: 0.8rem;">
-            &copy; 2026 Mats Leander Grobe. All rights reserved.
+        <!-- CONTACT -->
+        <section id="contact">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container" style="text-align: center; padding: 40px 0;">
+                <p
+                    style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    I'm always open to discussing new research opportunities, collaborations, or just chatting about
+                    Neural Rendering.
+                </p>
+
+                <div class="contact-links" style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+                    <a href="mailto:matsgrobe@mailbox.org" class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <span>matsgrobe@mailbox.org</span>
+                    </a>
+                    <a href="https://github.com/matsgrobe" target="_blank" class="contact-item">
+                        <span class="contact-icon">🐙</span>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="tel:+491601823047" class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <span>+49 160 182 3047</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p>&copy; 2026 Mats Leander Grobe. All rights reserved.</p>
+                <p style="font-size: 0.8rem; margin-top: 10px; color: var(--text-secondary);">
+                    Built with <span style="color: var(--accent-color);">♥</span> and Neural Networks (just kidding,
+                    standard HTML/CSS).
+                </p>
+            </div>
         </footer>
 
     </div>

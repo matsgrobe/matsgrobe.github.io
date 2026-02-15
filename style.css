@@ -213,6 +213,12 @@ header#hero {
     gap: 30px;
 }
 
+.hackathon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
 .project-card {
     background: var(--card-bg);
     border: 1px solid var(--border-color);

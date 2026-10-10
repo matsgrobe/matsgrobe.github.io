@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FR3 Duo Digital Twin | Mats Grobe</title>
+    <link rel="stylesheet" href="../style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400&display=swap"
+        rel="stylesheet">
+    <meta name="description"
+        content="A digital twin framework for teleoperating a dual-arm Franka FR3 station on tabletop tasks: four recorded episodes, each shown from the operator's head pose and from an orbiting camera.">
+    <style>
+        .demo-intro {
+            padding-top: calc(var(--nav-height) + 40px);
+            max-width: 800px;
+        }
+
+        .demo-intro .hero-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+        }
+
+        .demo-intro .hero-text {
+            max-width: none;
+        }
+
+        .demo-task {
+            margin: 0;
+            padding: 40px 0;
+        }
+
+        .demo-task .project-title {
+            font-size: 1.4rem;
+        }
+
+        .demo-instruction {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .demo-pair {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .demo-pair figure {
+            margin: 0;
+        }
+
+        .demo-pair video {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            display: block;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            background: #000;
+        }
+
+        .demo-pair figcaption {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 768px) {
+            .demo-pair {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <nav class="navbar">
+            <div class="nav-logo"><a href="../" style="color: inherit;">Mats Grobe</a></div>
+            <ul class="nav-links">
+                <li><a href="../#projects">Projects</a></li>
+                <li><a href="../#experience">Experience</a></li>
+                <li><a href="../#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <header class="demo-intro">
+            <h1 class="hero-title">FR3 Duo Digital Twin for Tabletop Teleoperation</h1>
+            <div class="tech-stack">
+                <span>Gaussian Splatting</span>
+                <span>6-DoF Object Tracking</span>
+                <span>VR Teleoperation</span>
+                <span>three.js</span>
+            </div>
+            <p class="hero-text">
+                An operator wearing a VR headset teleoperates a dual-arm Franka FR3 station from inside a live digital
+                twin of its table. The scene is a Gaussian-splat scan of the station, the arms follow the robot's joint
+                state, and every object on the table is a scanned mesh whose pose is tracked in real time. Below are
+                four recorded episodes, each replayed in the twin twice: once from the operator's own head pose, with
+                the station's camera in the corner for comparison, and once from a camera circling the table.
+            </p>
+        </header>
+
+        <section class="demo-task visible">
+            <h2 class="project-title">Sort bottles into crate</h2>
+            <p class="demo-instruction">Sort the brown and the green bottle into the crate, each into the row that
+                already holds its kind. · 1 min 31 s</p>
+            <div class="demo-pair">
+                <figure>
+                    <video controls muted playsinline preload="none"
+                        poster="../assets/images/twin-teleop/sort-bottles-headpose.jpg">
+                        <source src="../assets/videos/twin-teleop/sort-bottles-headpose.mp4" type="video/mp4">
+                    </video>
+                    <figcaption>From the operator's recorded head pose; the corner panel is the station's camera.</figcaption>
+                </figure>
+                <figure>
+                    <video class="orbit" loop muted playsinline preload="none"
+                        poster="../assets/images/twin-teleop/sort-bottles-orbit.jpg">
+                        <source src="../assets/videos/twin-teleop/sort-bottles-orbit.mp4" type="video/mp4">
+                    </video>
+                    <figcaption>The same episode from a camera circling the table.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="demo-task visible">
+            <h2 class="project-title">Pack a camera into its box</h2>
+            <p class="demo-instruction">Pack the Vizolink camera and the remote into the box, then close it. · 1 min 43 s</p>
+            <div class="demo-pair">
+                <figure>
+                    <video controls muted playsinline preload="none"
+                        poster="../assets/images/twin-teleop/pack-camera-headpose.jpg">
+                        <source src="../assets/videos/twin-teleop/pack-camera-headpose.mp4" type="video/mp4">
+                    </video>
+                    <figcaption>From the operator's recorded head pose; the corner panel is the station's camera.</figcaption>
+                </figure>
+                <figure>
+                    <video class="orbit" loop muted playsinline preload="none"
+                        poster="../assets/images/twin-teleop/pack-camera-orbit.jpg">
+                        <source src="../assets/videos/twin-teleop/pack-camera-orbit.mp4" type="video/mp4">
+                    </video>
+                    <figcaption>The same episode from a camera circling the table.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="demo-task visible">
+            <h2 class="project-title">Hang mugs on a mug holder</h2>
+            <p class="demo-instruction">Pick up both mugs and hang them onto the mug holder. · 1 min 44 s</p>
+            <div class="demo-pair">
+                <figure>
+                    <video controls muted playsinline preload="none"
+                        poster="../assets/images/twin-teleop/hang-mugs-headpose.jpg">
+                        <source src="../assets/videos/twin-teleop/hang-mugs-headpose.mp4" type="video/mp4">
+                    </video>
+                    <figcaption>From the operator's recorded head pose; the corner panel is the station's camera.</figcaption>
+                </figure>
+                <figure>
+                    <video class="orbit" loop muted playsinline preload="none"
+                        poster="../assets/images/twin-teleop/hang-mugs-orbit.jpg">
+                        <source src="../assets/videos/twin-teleop/hang-mugs-orbit.mp4" type="video/mp4">
+                    </video>
+                    <figcaption>The same episode from a camera circling the table.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="demo-task visible">
+            <h2 class="project-title">Stack two Lego bricks</h2>
+            <p class="demo-instruction">Stack the red Duplo brick on top of the blue one. · 1 min 16 s</p>
+            <div class="demo-pair">
+                <figure>
+                    <video controls muted playsinline preload="none"
+                        poster="../assets/images/twin-teleop/stack-lego-headpose.jpg">
+                        <source src="../assets/videos/twin-teleop/stack-lego-headpose.mp4" type="video/mp4">
+                    </video>
+                    <figcaption>From the operator's recorded head pose; the corner panel is the station's camera.</figcaption>
+                </figure>
+                <figure>
+                    <video class="orbit" loop muted playsinline preload="none"
+                        poster="../assets/images/twin-teleop/stack-lego-orbit.jpg">
+                        <source src="../assets/videos/twin-teleop/stack-lego-orbit.mp4" type="video/mp4">
+                    </video>
+                    <figcaption>The same episode from a camera circling the table.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p>&copy; 2026 Mats Leander Grobe. <a href="../">Back to the main page</a></p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        // The orbit clips play on their own while on screen and pause off it, so
+        // eight clips never stream at once; the head-pose clips wait for a click.
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) entry.target.play().catch(function () { });
+                else entry.target.pause();
+            });
+        }, { threshold: 0.5 });
+        document.querySelectorAll('video.orbit').forEach(function (v) { observer.observe(v); });
+    </script>
+</body>
+
+</html>

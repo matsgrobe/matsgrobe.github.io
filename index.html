@@ -5,505 +5,338 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mats Leander Grobe | Research Engineer</title>
-    <link rel="stylesheet" href="style.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400&display=swap"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <meta name="description"
         content="Portfolio of Mats Leander Grobe, Research Engineer in Neural Rendering & Visual Computing.">
 </head>
 
 <body>
 
-    <div class="container">
-
-        <!-- NAVIGATION -->
-        <nav class="navbar">
-            <div class="nav-logo">Mats Grobe</div>
-            <ul class="nav-links">
-                <li><a href="#hero">Home</a></li>
+    <!-- NAVIGATION -->
+    <nav class="topbar">
+        <div class="wrap topbar-grid">
+            <a href="#hero" class="topbar-name">Mats Leander Grobe</a>
+            <span class="topbar-meta">Research engineer<br>Neural rendering, robotics</span>
+            <span class="topbar-meta">Munich, DE<br>M.Sc. TUM, 2024 –</span>
+            <ul class="topbar-links">
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="accent">Contact</a></li>
             </ul>
-        </nav>
+        </div>
+    </nav>
 
-        <!-- HEADER / HERO -->
-        <header id="hero">
-            <div class="hero-content">
-                <span class="hero-super">Hello, I'm</span>
-                <h1 class="hero-title">Mats Grobe</h1>
-                <h2 class="hero-subtitle">Research Engineer in <span class="highlight">Neural Rendering</span> & <span
-                        class="highlight">Visual Computing</span>.</h2>
-                <p class="hero-text">
-                    Specializing in Inverse Rendering, Differentiable Rendering, and High-Performance Computing
-                    (CUDA/C++).
-                    Currently pursuing M.Sc. in Robotics, Cognition, Intelligence at TUM.
-                </p>
+    <main class="wrap">
+
+        <!-- HERO -->
+        <header id="hero" class="hero">
+            <h1 class="hero-name">Mats Grobe<span class="accent">.</span></h1>
+            <div class="grid hero-foot">
                 <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary">View Projects</a>
-                    <a href="assets/docs/Mats_Grobe_CV.pdf" target="_blank" class="btn btn-secondary">View CV</a>
-                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                    <a href="assets/docs/Mats_Grobe_CV.pdf" target="_blank" class="arrow-link">CV (PDF) <span>↓</span></a>
+                    <a href="#projects" class="arrow-link">Projects <span>→</span></a>
+                    <a href="#contact" class="arrow-link">Contact <span>→</span></a>
                 </div>
+                <p class="hero-lede">
+                    Research engineer in neural rendering and visual computing: inverse and differentiable
+                    rendering, 3D reconstruction, and the perception behind robot digital twins, down to the
+                    CUDA/C++. Currently M.Sc. Robotics, Cognition, Intelligence at TUM.
+                </p>
             </div>
         </header>
 
-        <!-- PROJECTS GALLERY -->
-        <section id="projects">
-            <h2 class="section-title">Selected Projects</h2>
-            <div class="projects-grid">
-
-                <!-- Project 1: Inverse Rendering -->
-                <article class="project-card featured">
-                    <div class="project-visual">
-                        <video src="assets/videos/bat_video.mp4" autoplay loop muted playsinline></video>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">i2DGS: Physically-based Inverse Rendering using 2D Gaussian Representations</h3>
-                        <div class="tech-stack">
-                            <span>PyTorch</span>
-                            <span>CUDA</span>
-                            <span>Differentiable Rendering</span>
-                        </div>
-                        <p class="project-desc">
-                            Reconstructing high-fidelity material properties and geometry from OLAT
-                            (One-Light-at-a-Time) lightstage data using a custom differentiable rasterizer.
-                        </p>
-                        <div class="project-links">
-                            <a href="assets/docs/Project_Report_1.pdf" target="_blank" class="code-btn">Report</a>
-                            <a href="https://github.com/OsamaS99/I2DGS#" target="_blank" class="code-btn">Code</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Project: FR3 Duo digital twin -->
-                <article class="project-card">
-                    <div class="project-visual">
-                        <video src="assets/videos/twin-teleop-teaser.mp4" autoplay loop muted playsinline></video>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">FR3 Duo Digital Twin for Tabletop Teleoperation</h3>
-                        <div class="tech-stack">
-                            <span>Gaussian Splatting</span>
-                            <span>Object Tracking</span>
-                            <span>VR</span>
-                        </div>
-                        <p class="project-desc">
-                            Teleoperating a dual-arm Franka FR3 station in VR from inside a live digital twin: a splat
-                            scan of the table, the arms from joint state, every object a tracked mesh.
-                        </p>
-                        <div class="project-links">
-                            <a href="twin-teleop/" class="code-btn">Demos</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Project 2: FoamSurf -->
-                <article class="project-card">
-                    <div class="project-visual">
-                        <img src="assets/images/foamsurf-teaser.png" alt="FoamSurf Teaser - Surface Reconstruction"
-                            loading="lazy">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">FoamSurf: High-Quality Surface Reconstruction Using RadFoam</h3>
-                        <div class="tech-stack">
-                            <span>Python</span>
-                            <span>CUDA</span>
-                            <span>C++</span>
-                        </div>
-                        <p class="project-desc">
-                            Extended differentiable volumetric rendering framework by integrating monocular depth/normal
-                            priors into a CUDA raytracing pipeline, outperforming 2D Gaussian Splatting in mesh quality.
-                        </p>
-                        <div class="project-links">
-                            <a href="assets/images/foamsurf_report.pdf" target="_blank" class="code-btn">Report</a>
-                            <a href="assets/images/FoamSurf_poster.pdf" target="_blank" class="code-btn">Poster</a>
-                            <a href="https://github.com/matsgrobe/FoamSurf" target="_blank" class="code-btn">Code</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Project 3: KinectFusion Implementation -->
-                <article class="project-card">
-                    <div class="project-visual">
-                        <video src="assets/videos/pipeline_comparison.mp4" autoplay loop muted playsinline></video>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">KinectFusion</h3>
-                        <div class="tech-stack">
-                            <span>C++</span>
-                            <span>CUDA</span>
-                            <span>OpenMP</span>
-                        </div>
-                        <p class="project-desc">
-                            Real-time 3D reconstruction algorithm fusing RGB-D sensor data into a dense volumetric model
-                            using a TSDF representation.
-                        </p>
-                        <div class="project-links">
-                            <a href="https://github.com/matsgrobe/KinectFusionTUM" target="_blank"
-                                class="code-btn">Code</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Project 4: 3D Printer Control -->
-                <article class="project-card">
-                    <div class="project-visual">
-                        <img src="assets/images/clip-printer-diagram.jpg" alt="CLIP 3D Printing Technology Diagram"
-                            loading="lazy">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">CLIP 3D Printer Control</h3>
-                        <div class="tech-stack">
-                            <span>C++</span>
-                            <span>Qt</span>
-                            <span>Hardware Control</span>
-                        </div>
-                        <p class="project-desc">
-                            Developed control software and GUI for a high-precision Continuous Liquid Interface
-                            Production (CLIP) 3D printer, achieving 20-micron resolution.
-                        </p>
-                        <div class="project-links">
-                            <a href="https://github.com/mats-grobe/Lee-Lab-SKKU-3D-Dynamic-Printing-Software-for-Clip-Dlp"
-                                target="_blank" class="code-btn">Code</a>
-                        </div>
-                    </div>
-                </article>
-
-
-                <!-- Project 5: AR Surgical Guidance -->
-                <article class="project-card">
-                    <div class="project-visual">
-                        <video src="assets/videos/vr_surgical_guidance.mp4" autoplay loop muted playsinline></video>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">AR Surgical Guidance</h3>
-                        <div class="tech-stack">
-                            <span>Unity</span>
-                            <span>Vuforia</span>
-                            <span>C#</span>
-                            <span>AR</span>
-                        </div>
-                        <p class="project-desc">
-                            Augmented Reality guidance system for a 3-point sequential biopsy simulation, implementing
-                            real-time tracking and visual aids for surgical precision.
-                        </p>
-                        <div class="project-links">
-                            <a href="https://github.com/matsgrobe/VR_Surgical_Guidance" target="_blank"
-                                class="code-btn">Code</a>
-                        </div>
-                    </div>
-                </article>
-
+        <!-- PROJECTS -->
+        <section id="projects" class="block">
+            <h2 class="block-label"><span>01</span> Selected projects</h2>
+            <div class="index-head">
+                <span>No.</span><span></span><span>Project</span><span>Stack</span><span>Links</span>
             </div>
+
+            <article class="row">
+                <span class="row-no">01</span>
+                <a href="twin-teleop/" class="row-media">
+                    <video src="assets/videos/twin-teleop-teaser.mp4" autoplay loop muted playsinline></video>
+                </a>
+                <div class="row-body">
+                    <h3 class="row-title">FR3 Duo Digital Twin for Tabletop Teleoperation</h3>
+                    <p>Teleoperating a dual-arm Franka FR3 station in VR from inside a live digital twin: a splat
+                        scan of the table, the arms from joint state, every object a tracked mesh.</p>
+                </div>
+                <span class="row-stack">Gaussian Splatting<br>Object Tracking<br>VR</span>
+                <span class="row-links"><a href="twin-teleop/">Demos →</a></span>
+            </article>
+
+            <article class="row">
+                <span class="row-no">02</span>
+                <div class="row-media">
+                    <video src="assets/videos/bat_video.mp4" autoplay loop muted playsinline></video>
+                </div>
+                <div class="row-body">
+                    <h3 class="row-title">i2DGS: Physically-based Inverse Rendering using 2D Gaussian Representations</h3>
+                    <p>Reconstructing high-fidelity material properties and geometry from OLAT
+                        (One-Light-at-a-Time) lightstage data using a custom differentiable rasterizer.</p>
+                </div>
+                <span class="row-stack">PyTorch<br>CUDA<br>Differentiable Rendering</span>
+                <span class="row-links">
+                    <a href="assets/docs/Project_Report_1.pdf" target="_blank">Report ↗</a>
+                    <a href="https://github.com/OsamaS99/I2DGS#" target="_blank">Code ↗</a>
+                </span>
+            </article>
+
+            <article class="row">
+                <span class="row-no">03</span>
+                <div class="row-media">
+                    <img src="assets/images/foamsurf-teaser.png" alt="FoamSurf pipeline overview" loading="lazy">
+                </div>
+                <div class="row-body">
+                    <h3 class="row-title">FoamSurf: High-Quality Surface Reconstruction Using RadFoam</h3>
+                    <p>Extended differentiable volumetric rendering framework by integrating monocular depth/normal
+                        priors into a CUDA raytracing pipeline, outperforming 2D Gaussian Splatting in mesh quality.</p>
+                </div>
+                <span class="row-stack">Python<br>CUDA<br>C++</span>
+                <span class="row-links">
+                    <a href="assets/images/foamsurf_report.pdf" target="_blank">Report ↗</a>
+                    <a href="assets/images/FoamSurf_poster.pdf" target="_blank">Poster ↗</a>
+                    <a href="https://github.com/matsgrobe/FoamSurf" target="_blank">Code ↗</a>
+                </span>
+            </article>
+
+            <article class="row">
+                <span class="row-no">04</span>
+                <div class="row-media">
+                    <video src="assets/videos/pipeline_comparison.mp4" autoplay loop muted playsinline></video>
+                </div>
+                <div class="row-body">
+                    <h3 class="row-title">KinectFusion</h3>
+                    <p>Real-time 3D reconstruction algorithm fusing RGB-D sensor data into a dense volumetric model
+                        using a TSDF representation.</p>
+                </div>
+                <span class="row-stack">C++<br>CUDA<br>OpenMP</span>
+                <span class="row-links"><a href="https://github.com/matsgrobe/KinectFusionTUM" target="_blank">Code ↗</a></span>
+            </article>
+
+            <article class="row">
+                <span class="row-no">05</span>
+                <div class="row-media">
+                    <img src="assets/images/clip-printer-diagram.jpg" alt="CLIP 3D printing technology diagram" loading="lazy">
+                </div>
+                <div class="row-body">
+                    <h3 class="row-title">CLIP 3D Printer Control</h3>
+                    <p>Developed control software and GUI for a high-precision Continuous Liquid Interface
+                        Production (CLIP) 3D printer, achieving 20-micron resolution.</p>
+                </div>
+                <span class="row-stack">C++<br>Qt<br>Hardware Control</span>
+                <span class="row-links"><a href="https://github.com/mats-grobe/Lee-Lab-SKKU-3D-Dynamic-Printing-Software-for-Clip-Dlp" target="_blank">Code ↗</a></span>
+            </article>
+
+            <article class="row">
+                <span class="row-no">06</span>
+                <div class="row-media">
+                    <video src="assets/videos/vr_surgical_guidance.mp4" autoplay loop muted playsinline></video>
+                </div>
+                <div class="row-body">
+                    <h3 class="row-title">AR Surgical Guidance</h3>
+                    <p>Augmented Reality guidance system for a 3-point sequential biopsy simulation, implementing
+                        real-time tracking and visual aids for surgical precision.</p>
+                </div>
+                <span class="row-stack">Unity<br>Vuforia<br>C#<br>AR</span>
+                <span class="row-links"><a href="https://github.com/matsgrobe/VR_Surgical_Guidance" target="_blank">Code ↗</a></span>
+            </article>
         </section>
 
         <!-- HACKATHONS -->
-        <section id="hackathons">
-            <h2 class="section-title">Hackathons</h2>
-            <div class="hackathon-grid">
+        <section id="hackathons" class="block">
+            <h2 class="block-label"><span>02</span> Hackathons</h2>
 
-                <!-- Project: paintingLeRobot -->
-                <article class="project-card">
-                    <div class="project-visual">
-                        <div class="visual-placeholder" style="background: linear-gradient(45deg, #ec4899, #8b5cf6);">
-                            <span>paintingLeRobot</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">paintingLeRobot</h3>
-                        <div style="margin-bottom: 15px;">
-                            <div class="card-subtitle" style="font-size: 0.95rem; margin-bottom: 2px; display: block;">
-                                Munich Robotics Hackathon</div>
-                            <div class="card-date" style="font-size: 0.85rem;">June 14-15, 2025</div>
-                        </div>
-
-                        <div class="tech-stack">
-                            <span>Robotics</span>
-                            <span>Computer Vision</span>
-                            <span>LLMs</span>
-                            <span>Imitation Learning</span>
-                        </div>
-                        <p class="project-desc">
-                            A dual-arm robotic system that uses a pipeline of computer vision, large language models,
-                            and imitation learning to transform digital images into physical drawings with colored
-                            stencils. Developed in 48 hours.
-                        </p>
-                        <div class="project-links">
-                            <a href="https://github.com/BennoNederkorn/paintingLeRobot" target="_blank"
-                                class="code-btn">View Code</a>
-                        </div>
-                    </div>
-                </article>
-
-            </div>
+            <article class="row row-first">
+                <span class="row-no">01</span>
+                <div class="row-media row-media-type">paintingLeRobot</div>
+                <div class="row-body">
+                    <h3 class="row-title">paintingLeRobot</h3>
+                    <p class="row-sub">Munich Robotics Hackathon · June 14–15, 2025</p>
+                    <p>A dual-arm robotic system that uses a pipeline of computer vision, large language models,
+                        and imitation learning to transform digital images into physical drawings with colored
+                        stencils. Developed in 48 hours.</p>
+                </div>
+                <span class="row-stack">Robotics<br>Computer Vision<br>LLMs<br>Imitation Learning</span>
+                <span class="row-links"><a href="https://github.com/BennoNederkorn/paintingLeRobot" target="_blank">Code ↗</a></span>
+            </article>
         </section>
 
         <!-- EDUCATION -->
-        <section id="education">
-            <h2 class="section-title">Education</h2>
+        <section id="education" class="block">
+            <h2 class="block-label"><span>03</span> Education</h2>
 
-            <div class="timeline-item">
-                <div class="card">
-                    <div class="card-header">
-                        <div>
-                            <div class="card-title">Technical University of Munich (TUM)</div>
-                            <div class="card-subtitle">M.Sc. in Robotics, Cognition, Intelligence</div>
-                        </div>
-                        <div class="card-date">Oct 2024 -- Present</div>
-                    </div>
-                    <div class="card-details">
-                        <p>Munich, Germany <span class="grade-badge">Grade: 1.5 (Top 2%)</span></p>
-                    </div>
+            <div class="entry">
+                <span class="entry-date">Oct 2024 – Present</span>
+                <div class="entry-body">
+                    <h3 class="entry-title">M.Sc. in Robotics, Cognition, Intelligence</h3>
+                    <p class="entry-org">Technical University of Munich (TUM) · Munich, Germany</p>
                 </div>
+                <span class="entry-note">Grade 1.5<br><span class="accent">Top 2%</span></span>
             </div>
 
-            <div class="timeline-item">
-                <div class="card">
-                    <div class="card-header">
-                        <div>
-                            <div class="card-title">Sungkyunkwan University (SKKU)</div>
-                            <div class="card-subtitle">B.Sc. in Mechanical Engineering</div>
-                        </div>
-                        <div class="card-date">Sept 2020 -- Aug 2024</div>
-                    </div>
-                    <div class="card-details">
-                        <p>Seoul, South Korea <span class="grade-badge">Grade: 3.99/4.5</span></p>
-                    </div>
+            <div class="entry">
+                <span class="entry-date">Sept 2020 – Aug 2024</span>
+                <div class="entry-body">
+                    <h3 class="entry-title">B.Sc. in Mechanical Engineering</h3>
+                    <p class="entry-org">Sungkyunkwan University (SKKU) · Seoul, South Korea</p>
                 </div>
+                <span class="entry-note">Grade 3.99 / 4.5</span>
             </div>
-
-
         </section>
 
         <!-- EXPERIENCE -->
-        <section id="experience">
-            <h2 class="section-title">Research & Professional Experience</h2>
+        <section id="experience" class="block">
+            <h2 class="block-label"><span>04</span> Research &amp; professional experience</h2>
 
-            <div class="timeline-item">
-                <div class="card">
-                    <div class="card-header">
-                        <div>
-                            <div class="card-title">Tutor: Introduction to Deep Learning (I2DL)</div>
-                            <div class="card-subtitle">Technical University of Munich</div>
-                        </div>
-                        <div class="card-date">Apr 2025 -- Present</div>
-                    </div>
-                    <div class="card-details">
-                        <ul>
-                            <li>Teaching Deep Learning concepts (Backpropagation, CNNs, Transformers, GANs) to graduate
-                                students.</li>
-                            <li>Assisting with PyTorch implementation exercises and grading exams.</li>
-                        </ul>
-                    </div>
+            <div class="entry">
+                <span class="entry-date">Apr 2025 – Present</span>
+                <div class="entry-body">
+                    <h3 class="entry-title">Tutor: Introduction to Deep Learning (I2DL)</h3>
+                    <p class="entry-org">Technical University of Munich</p>
+                    <ul>
+                        <li>Teaching Deep Learning concepts (Backpropagation, CNNs, Transformers, GANs) to graduate
+                            students.</li>
+                        <li>Assisting with PyTorch implementation exercises and grading exams.</li>
+                    </ul>
                 </div>
+                <span class="entry-note"></span>
             </div>
 
-            <div class="timeline-item">
-                <div class="card">
-                    <div class="card-header">
-                        <div>
-                            <div class="card-title">Researcher: Advanced Additive Manufacturing Lab</div>
-                            <div class="card-subtitle">Sungkyunkwan University (Prof. Brian J. Lee)</div>
-                        </div>
-                        <div class="card-date">Nov 2023 -- Mar 2024</div>
-                    </div>
-                    <div class="card-details">
-                        <ul>
-                            <li>Full instrumentation of high-precision CLIP (Continuous Liquid Interface Production) 3D
-                                Printer.</li>
-                            <li>Developed the control software in <strong>C++</strong> from the ground up, including a
-                                custom GUI via <strong>Qt</strong>.</li>
-                            <li>Achieved 20-micron print resolution through precise stepper motor control.</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://github.com/mats-grobe/Lee-Lab-SKKU-3D-Dynamic-Printing-Software-for-Clip-Dlp"
-                                class="code-btn" target="_blank">View Code</a>
-                        </div>
-                    </div>
+            <div class="entry">
+                <span class="entry-date">Nov 2023 – Mar 2024</span>
+                <div class="entry-body">
+                    <h3 class="entry-title">Researcher: Advanced Additive Manufacturing Lab</h3>
+                    <p class="entry-org">Sungkyunkwan University (Prof. Brian J. Lee)</p>
+                    <ul>
+                        <li>Full instrumentation of high-precision CLIP (Continuous Liquid Interface Production) 3D
+                            Printer.</li>
+                        <li>Developed the control software in C++ from the ground up, including a custom GUI via Qt.</li>
+                        <li>Achieved 20-micron print resolution through precise stepper motor control.</li>
+                    </ul>
                 </div>
+                <span class="entry-note"><a href="https://github.com/mats-grobe/Lee-Lab-SKKU-3D-Dynamic-Printing-Software-for-Clip-Dlp" target="_blank">Code ↗</a></span>
             </div>
 
-            <div class="timeline-item">
-                <div class="card">
-                    <div class="card-header">
-                        <div>
-                            <div class="card-title">Intern: Embedded Systems</div>
-                            <div class="card-subtitle">MAN Truck & Bus Korea</div>
-                        </div>
-                        <div class="card-date">June 2023 -- July 2023</div>
-                    </div>
-                    <div class="card-details">
-                        <ul>
-                            <li>Designed a Diesel Engine Control Unit (ECU) interface using Arduino microcontrollers.
-                            </li>
-                            <li>Enabled two-way communication via <strong>CAN Bus</strong> to control truck features for
-                                diagnostics.</li>
-                            <li>Authored technical manuals for local engineering staff.</li>
-                        </ul>
-                    </div>
+            <div class="entry">
+                <span class="entry-date">June 2023 – July 2023</span>
+                <div class="entry-body">
+                    <h3 class="entry-title">Intern: Embedded Systems</h3>
+                    <p class="entry-org">MAN Truck &amp; Bus Korea</p>
+                    <ul>
+                        <li>Designed a Diesel Engine Control Unit (ECU) interface using Arduino microcontrollers.</li>
+                        <li>Enabled two-way communication via CAN Bus to control truck features for diagnostics.</li>
+                        <li>Authored technical manuals for local engineering staff.</li>
+                    </ul>
                 </div>
+                <span class="entry-note"></span>
             </div>
 
-            <div class="timeline-item">
-                <div class="card">
-                    <div class="card-header">
-                        <div>
-                            <div class="card-title">Researcher: Microfluidic Convergence Lab</div>
-                            <div class="card-subtitle">Sungkyunkwan University (Prof. Jinkee Lee)</div>
-                        </div>
-                        <div class="card-date">Dec 2022 -- Feb 2023</div>
-                    </div>
-                    <div class="card-details">
-                        <ul>
-                            <li>Conducted <strong>Computational Fluid Dynamics (CFD)</strong> simulations of gas-dynamic
-                                virtual nozzles.</li>
-                            <li>Analyzed droplet formation behavior using simulation data to optimize nozzle geometry.
-                            </li>
-                        </ul>
-                    </div>
+            <div class="entry">
+                <span class="entry-date">Dec 2022 – Feb 2023</span>
+                <div class="entry-body">
+                    <h3 class="entry-title">Researcher: Microfluidic Convergence Lab</h3>
+                    <p class="entry-org">Sungkyunkwan University (Prof. Jinkee Lee)</p>
+                    <ul>
+                        <li>Conducted Computational Fluid Dynamics (CFD) simulations of gas-dynamic virtual nozzles.</li>
+                        <li>Analyzed droplet formation behavior using simulation data to optimize nozzle geometry.</li>
+                    </ul>
                 </div>
+                <span class="entry-note"></span>
             </div>
 
-            <div class="timeline-item">
-                <div class="card">
-                    <div class="card-header">
-                        <div>
-                            <div class="card-title">Intern: Robotics Support</div>
-                            <div class="card-subtitle">Plasmatreat Korea</div>
-                        </div>
-                        <div class="card-date">Dec 2021 -- Feb 2022</div>
-                    </div>
-                    <div class="card-details">
-                        <ul>
-                            <li>Programmed a 3-axis robot for automated atmospheric plasma surface treatment in a lab
-                                environment.</li>
-                            <li>Supported the sales engineering team during on-site customer visits and ad-hoc service
-                                calls.</li>
-                        </ul>
-                    </div>
+            <div class="entry">
+                <span class="entry-date">Dec 2021 – Feb 2022</span>
+                <div class="entry-body">
+                    <h3 class="entry-title">Intern: Robotics Support</h3>
+                    <p class="entry-org">Plasmatreat Korea</p>
+                    <ul>
+                        <li>Programmed a 3-axis robot for automated atmospheric plasma surface treatment in a lab
+                            environment.</li>
+                        <li>Supported the sales engineering team during on-site customer visits and ad-hoc service
+                            calls.</li>
+                    </ul>
                 </div>
+                <span class="entry-note"></span>
             </div>
-
         </section>
 
         <!-- SKILLS -->
-        <section id="skills">
-            <h2 class="section-title">Skills & Languages</h2>
-
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Programming & Compute</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">C++ (STL, C++17)</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">CUDA</span>
-                        <span class="skill-tag">PyTorch</span>
-                        <span class="skill-tag">MATLAB</span>
-                        <span class="skill-tag">Qt</span>
-                    </div>
+        <section id="skills" class="block">
+            <h2 class="block-label"><span>05</span> Skills &amp; languages</h2>
+            <div class="skills">
+                <div>
+                    <h3 class="skills-head">Programming &amp; Compute</h3>
+                    <ul class="skills-list">
+                        <li>C++ (STL, C++17)</li>
+                        <li>Python</li>
+                        <li>CUDA</li>
+                        <li>PyTorch</li>
+                        <li>MATLAB</li>
+                        <li>Qt</li>
+                    </ul>
                 </div>
-
-                <div class="skill-category">
-                    <h3>Simulation & Engineering</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">CFD (Ansys Fluent)</span>
-                        <span class="skill-tag">ROS/ROS2</span>
-                        <span class="skill-tag">Arduino</span>
-                        <span class="skill-tag">CAN Bus</span>
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Linux</span>
-                    </div>
+                <div>
+                    <h3 class="skills-head">Simulation &amp; Engineering</h3>
+                    <ul class="skills-list">
+                        <li>CFD (Ansys Fluent)</li>
+                        <li>ROS/ROS2</li>
+                        <li>Arduino</li>
+                        <li>CAN Bus</li>
+                        <li>Git</li>
+                        <li>Docker</li>
+                        <li>Linux</li>
+                    </ul>
                 </div>
-            </div>
-
-            <div class="lang-grid">
-                <div class="lang-item">
-                    <span class="lang-name">German</span>
-                    <span class="lang-level">Native</span>
-                </div>
-                <div class="lang-item">
-                    <span class="lang-name">English</span>
-                    <span class="lang-level">Expert (C1/C2)</span>
-                </div>
-                <div class="lang-item">
-                    <span class="lang-name">Korean</span>
-                    <span class="lang-level">B2 (TOPIK 4)</span>
-                </div>
-                <div class="lang-item">
-                    <span class="lang-name">Russian</span>
-                    <span class="lang-level">Intermediate</span>
-                </div>
-                <div class="lang-item">
-                    <span class="lang-name">Italian</span>
-                    <span class="lang-level">Intermediate</span>
+                <div>
+                    <h3 class="skills-head">Languages</h3>
+                    <ul class="skills-list skills-pairs">
+                        <li><span>German</span><span>Native</span></li>
+                        <li><span>English</span><span>Expert (C1/C2)</span></li>
+                        <li><span>Korean</span><span>B2 (TOPIK 4)</span></li>
+                        <li><span>Russian</span><span>Intermediate</span></li>
+                        <li><span>Italian</span><span>Intermediate</span></li>
+                    </ul>
                 </div>
             </div>
         </section>
 
         <!-- VOLUNTEERING -->
-        <section id="volunteering">
-            <h2 class="section-title">Volunteering</h2>
-
-            <div class="timeline-item">
-                <div class="card">
-                    <div class="card-header">
-                        <div>
-                            <div class="card-title">European Solidarity Corps</div>
-                            <div class="card-subtitle">Volunteer in Kindergarten (Makkabi Lauder)</div>
-                        </div>
-                        <div class="card-date">Sept 2019 -- Mar 2020</div>
-                    </div>
-                    <div class="card-details">
-                        <p>Samara, Russia</p>
-                    </div>
+        <section id="volunteering" class="block">
+            <h2 class="block-label"><span>06</span> Volunteering</h2>
+            <div class="entry">
+                <span class="entry-date">Sept 2019 – Mar 2020</span>
+                <div class="entry-body">
+                    <h3 class="entry-title">European Solidarity Corps</h3>
+                    <p class="entry-org">Volunteer in Kindergarten (Makkabi Lauder) · Samara, Russia</p>
                 </div>
+                <span class="entry-note"></span>
             </div>
         </section>
 
-        <!-- CONTACT -->
-        <section id="contact">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-container" style="text-align: center; padding: 40px 0;">
-                <p
-                    style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">
-                    I'm always open to discussing new research opportunities, collaborations, or just chatting about
-                    Neural Rendering.
-                </p>
+    </main>
 
-                <div class="contact-links" style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
-                    <a href="mailto:matsgrobe@mailbox.org" class="contact-item">
-                        <span class="contact-icon">✉️</span>
-                        <span>matsgrobe@mailbox.org</span>
-                    </a>
-                    <a href="https://github.com/matsgrobe" target="_blank" class="contact-item">
-                        <span class="contact-icon">🐙</span>
-                        <span>GitHub</span>
-                    </a>
-                    <a href="tel:+491601823047" class="contact-item">
-                        <span class="contact-icon">📞</span>
-                        <span>+49 160 182 3047</span>
-                    </a>
+    <!-- CONTACT -->
+    <footer id="contact" class="contact">
+        <div class="wrap">
+            <p class="contact-kicker">Get in touch — always open to research opportunities and collaborations.</p>
+            <a href="mailto:matsgrobe@mailbox.org" class="contact-mail">matsgrobe@<br>mailbox.org</a>
+            <div class="contact-foot">
+                <div class="contact-links">
+                    <a href="https://github.com/matsgrobe" target="_blank">GitHub ↗</a>
+                    <a href="tel:+491601823047">+49 160 182 3047</a>
+                    <a href="assets/docs/Mats_Grobe_CV.pdf" target="_blank">CV (PDF) ↓</a>
                 </div>
+                <span>© 2026 Mats Leander Grobe</span>
             </div>
-        </section>
+        </div>
+    </footer>
 
-        <!-- FOOTER -->
-        <footer class="site-footer">
-            <div class="footer-content">
-                <p>&copy; 2026 Mats Leander Grobe. All rights reserved.</p>
-                <p style="font-size: 0.8rem; margin-top: 10px; color: var(--text-secondary);">
-                    Built with <span style="color: var(--accent-color);">♥</span> and Neural Networks (just kidding,
-                    standard HTML/CSS).
-                </p>
-            </div>
-        </footer>
-
-    </div>
-
-    <script src="script.js"></script>
 </body>
 
 </html>

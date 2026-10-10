@@ -5,68 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FR3 Duo Digital Twin | Mats Grobe</title>
-    <link rel="stylesheet" href="../style.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400&display=swap"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
     <meta name="description"
         content="A digital twin framework for teleoperating a dual-arm Franka FR3 station on tabletop tasks: four recorded episodes, each shown from the operator's head pose and from an orbiting camera.">
     <style>
-        .demo-intro {
-            padding-top: calc(var(--nav-height) + 40px);
-            max-width: 800px;
+        .demo-hero {
+            padding: 72px 0 56px;
+            border-bottom: 2px solid var(--fg);
         }
 
-        .demo-intro .hero-title {
-            font-size: clamp(2rem, 5vw, 3rem);
-        }
-
-        .demo-intro .hero-text {
-            max-width: none;
-        }
-
-        .demo-task {
-            margin: 0;
-            padding: 40px 0;
-        }
-
-        .demo-task .project-title {
-            font-size: 1.4rem;
-        }
-
-        .demo-instruction {
-            color: var(--text-secondary);
-            margin-bottom: 20px;
+        .demo-title {
+            font-size: clamp(44px, 7vw, 104px);
+            line-height: .92;
+            font-weight: 600;
+            letter-spacing: -.05em;
+            max-width: 1100px;
         }
 
         .demo-pair {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-        }
-
-        .demo-pair figure {
-            margin: 0;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            column-gap: 16px;
+            margin-top: 20px;
         }
 
         .demo-pair video {
             width: 100%;
             aspect-ratio: 16 / 9;
-            display: block;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-            background: #000;
+            background: var(--fg);
         }
 
         .demo-pair figcaption {
             margin-top: 10px;
-            font-size: 0.9rem;
-            color: var(--text-secondary);
+            font-size: 14px;
+            color: var(--muted);
         }
 
         @media (max-width: 768px) {
             .demo-pair {
                 grid-template-columns: 1fr;
+                row-gap: 24px;
             }
         }
     </style>
@@ -74,38 +55,38 @@
 
 <body>
 
-    <div class="container">
-
-        <nav class="navbar">
-            <div class="nav-logo"><a href="../" style="color: inherit;">Mats Grobe</a></div>
-            <ul class="nav-links">
+    <nav class="topbar">
+        <div class="wrap topbar-grid">
+            <a href="../" class="topbar-name">Mats Leander Grobe</a>
+            <span class="topbar-meta">Research engineer<br>Neural rendering, robotics</span>
+            <span class="topbar-meta">Munich, DE<br>M.Sc. TUM, 2024 –</span>
+            <ul class="topbar-links">
                 <li><a href="../#projects">Projects</a></li>
                 <li><a href="../#experience">Experience</a></li>
-                <li><a href="../#contact">Contact</a></li>
+                <li><a href="../#contact" class="accent">Contact</a></li>
             </ul>
-        </nav>
+        </div>
+    </nav>
 
-        <header class="demo-intro">
-            <h1 class="hero-title">FR3 Duo Digital Twin for Tabletop Teleoperation</h1>
-            <div class="tech-stack">
-                <span>Gaussian Splatting</span>
-                <span>6-DoF Object Tracking</span>
-                <span>VR Teleoperation</span>
-                <span>three.js</span>
+    <main class="wrap">
+
+        <header class="demo-hero">
+            <h1 class="demo-title">FR3 Duo Digital Twin for Tabletop Teleoperation<span class="accent">.</span></h1>
+            <div class="grid hero-foot">
+                <div class="hero-cta">
+                    <span class="row-stack">Gaussian Splatting · 6-DoF Object Tracking · VR Teleoperation · three.js</span>
+                </div>
+                <p class="hero-lede">
+                    An operator wearing a VR headset teleoperates a dual-arm Franka FR3 station from inside a live
+                    digital twin of its table. The scene is a Gaussian-splat scan of the station, the arms follow the
+                    robot's joint state, and every object on the table is a scanned mesh whose pose is tracked in real
+                    time.
+                </p>
             </div>
-            <p class="hero-text">
-                An operator wearing a VR headset teleoperates a dual-arm Franka FR3 station from inside a live digital
-                twin of its table. The scene is a Gaussian-splat scan of the station, the arms follow the robot's joint
-                state, and every object on the table is a scanned mesh whose pose is tracked in real time. Below are
-                four recorded episodes, each replayed in the twin twice: once from the operator's own head pose, with
-                the station's camera in the corner for comparison, and once from a camera circling the table.
-            </p>
         </header>
 
-        <section class="demo-task visible">
-            <h2 class="project-title">Sort bottles into crate</h2>
-            <p class="demo-instruction">Sort the brown and the green bottle into the crate, each into the row that
-                already holds its kind. · 1 min 31 s</p>
+        <section class="block">
+            <h2 class="block-label"><span>01</span> Sort bottles into crate · 1 min 31 s</h2>
             <div class="demo-pair">
                 <figure>
                     <video controls muted playsinline preload="none"
@@ -124,9 +105,8 @@
             </div>
         </section>
 
-        <section class="demo-task visible">
-            <h2 class="project-title">Pack a camera into its box</h2>
-            <p class="demo-instruction">Pack the Vizolink camera and the remote into the box, then close it. · 1 min 43 s</p>
+        <section class="block">
+            <h2 class="block-label"><span>02</span> Pack a camera into its box · 1 min 43 s</h2>
             <div class="demo-pair">
                 <figure>
                     <video controls muted playsinline preload="none"
@@ -145,9 +125,8 @@
             </div>
         </section>
 
-        <section class="demo-task visible">
-            <h2 class="project-title">Hang mugs on a mug holder</h2>
-            <p class="demo-instruction">Pick up both mugs and hang them onto the mug holder. · 1 min 44 s</p>
+        <section class="block">
+            <h2 class="block-label"><span>03</span> Hang mugs on a mug holder · 1 min 44 s</h2>
             <div class="demo-pair">
                 <figure>
                     <video controls muted playsinline preload="none"
@@ -166,9 +145,8 @@
             </div>
         </section>
 
-        <section class="demo-task visible">
-            <h2 class="project-title">Stack two Lego bricks</h2>
-            <p class="demo-instruction">Stack the red Duplo brick on top of the blue one. · 1 min 16 s</p>
+        <section class="block">
+            <h2 class="block-label"><span>04</span> Stack two Lego bricks · 1 min 16 s</h2>
             <div class="demo-pair">
                 <figure>
                     <video controls muted playsinline preload="none"
@@ -187,13 +165,20 @@
             </div>
         </section>
 
-        <footer class="site-footer">
-            <div class="footer-content">
-                <p>&copy; 2026 Mats Leander Grobe. <a href="../">Back to the main page</a></p>
-            </div>
-        </footer>
+    </main>
 
-    </div>
+    <footer class="contact">
+        <div class="wrap">
+            <a href="../" class="contact-mail">← Back</a>
+            <div class="contact-foot">
+                <div class="contact-links">
+                    <a href="mailto:matsgrobe@mailbox.org">matsgrobe@mailbox.org</a>
+                    <a href="https://github.com/matsgrobe" target="_blank">GitHub ↗</a>
+                </div>
+                <span>© 2026 Mats Leander Grobe</span>
+            </div>
+        </div>
+    </footer>
 
     <script>
         // The orbit clips play on their own while on screen and pause off it, so

@@ -223,6 +223,14 @@ video {
     object-fit: cover;
 }
 
+.row-media-contain {
+    background: #000;
+}
+
+.row-media-contain video {
+    object-fit: contain;
+}
+
 .row-media-type {
     display: flex;
     align-items: flex-end;

@@ -224,10 +224,16 @@ video {
 }
 
 .row-media-contain {
+    position: relative;
+    align-self: stretch;
+    aspect-ratio: auto;
+    min-height: 180px;
     background: #000;
 }
 
 .row-media-contain video {
+    position: absolute;
+    inset: 0;
     object-fit: contain;
 }
 
@@ -422,6 +428,11 @@ video {
     .row-stack,
     .row-links {
         grid-column: 2;
+    }
+
+    .row-media-contain {
+        aspect-ratio: 16 / 9;
+        min-height: 0;
     }
 
     .row-links {
